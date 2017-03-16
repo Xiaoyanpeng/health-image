@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="../../css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/ui-dialog.min.css">
+	<link rel="stylesheet" href="../../css/cross.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Document</title>
+</head>
+<body style="background: #000;">
+<div class="container ovh">
+	<div class="title-bg">
+		<a href="../home/home.html" class="back-home fr" style="margin-top: 15px;margin-right: 40px;"></a>
+	</div>
+	
+	<div style="width: 100%;overflow: hidden;">
+		<div class="main-wrap" id="mainWrap">
+			
+			<div id="countHealth">
+				<div class="main-title"><span class="main-title-txt">健康情况分布</span></div>
+				<div class="main-content ovh">
+					<div class="main-content-left fl">
+						<div class="health-area" id="healthArea"></div>
+					</div>
+					<div class="main-content-right fr c-fff">
+						<div class="main-content-right-txt" id="countHealthTxt"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="countRecent">
+				<div class="main-title"><span class="main-title-txt">近期疾病</span></div>
+				<div class="main-content ovh">
+					<div class="main-content-left fl">
+						<div class="health-area" id="illness"></div>
+					</div>
+					<div class="main-content-right fr c-fff">
+						<div class="main-content-right-txt" id="countRecentTxt"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="coutnMap">
+				<div class="main-title"><span class="main-title-txt">糖尿病所在区域</span></div>
+				<div class="main-content ovh">
+					<div class="are-content-left fl">
+						<div class="xm-map ovh"></div>
+					</div>
+					<div class="are-content-right fr">
+						<div class="main-content-right-txt" id="coutnAreaTxt"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="countAge">
+				<div class="main-title"><span class="main-title-txt">糖尿病患者年龄</span></div>
+				<div class="age-content ovh">
+					<div class="age-left fl"></div>
+					<div class="age-right fr">
+						<div class="age-right-img-list ovh" id="ageBox">
+							<div class="age-right-img-item">
+								<img src="img/toux_icon.png">
+								<p class="line1">20岁以下</p>
+								<p class="line2">20%</p>
+							</div>
+							<div class="age-right-img-item">
+								<img src="img/toux2_icon.png">
+								<p class="line1">20-40岁</p>
+								<p class="line2">20%</p>
+							</div>
+							<div class="age-right-img-item">
+								<img src="img/toux3_icon.png">
+								<p class="line1">40-65岁</p>
+								<p class="line2">20%</p>
+							</div>
+							<div class="age-right-img-item">
+								<img src="img/toux4_icon.png">
+								<p class="line1">65岁以上</p>
+								<p class="line2">20%</p>
+							</div>
+						</div>
+						<div class="age-right-msg" id="countAgeTxt"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="countSex">
+				<div class="main-title"><span class="main-title-txt">糖尿病性别占比</span></div>
+				<div class="main-content ovh">
+					<div class="main-content-left fl">
+						<div class="health-area" id="sexRatio"></div>
+					</div>
+					<div class="main-content-right fr c-fff">
+						<div class="main-content-right-txt" id="countSexTxt"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="coutnMap2">
+				<div class="main-title"><span class="main-title-txt">高血压所在区域</span></div>
+				<div class="main-content ovh">
+					<div class="are-content-left fl">
+						<div class="xm-map ovh" id="countMap"></div>
+					</div>
+					<div class="are-content-right fr">
+						<div class="main-content-right-txt" id="coutnAreaTxt"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="countAge2">
+				<div class="main-title"><span class="main-title-txt">高血压患者年龄</span></div>
+				<div class="age-content ovh">
+					<div class="age-left fl"></div>
+					<div class="age-right fr">
+						<div class="age-right-img-list ovh" id="ageBox">
+							<div class="age-right-img-item">
+								<img src="img/toux_icon.png">
+								<p class="line1">20岁以下</p>
+								<p class="line2">20%</p>
+							</div>
+							<div class="age-right-img-item">
+								<img src="img/toux2_icon.png">
+								<p class="line1">20-40岁</p>
+								<p class="line2">20%</p>
+							</div>
+							<div class="age-right-img-item">
+								<img src="img/toux3_icon.png">
+								<p class="line1">40-65岁</p>
+								<p class="line2">20%</p>
+							</div>
+							<div class="age-right-img-item">
+								<img src="img/toux4_icon.png">
+								<p class="line1">65岁以上</p>
+								<p class="line2">20%</p>
+							</div>
+						</div>
+						<div class="age-right-msg" id="countAgeTxt"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="countSex2">
+				<div class="main-title"><span class="main-title-txt">高血压性别占比</span></div>
+				<div class="main-content ovh">
+					<div class="main-content-left fl">
+						<div class="health-area" id="sexRatio"></div>
+					</div>
+					<div class="main-content-right fr c-fff">
+						<div class="main-content-right-txt" id="countSexTxt"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+
+</div>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/echarts.js"></script>
+
+<script type="text/javascript" src="../../js/underscore.js"></script>
+<script type="text/javascript" src="../../js/es6-promise.js"></script>
+<script type="text/javascript" src="../../js/dialog-plus.min.js"></script>
+<script type="text/javascript" src="../../js/common-util.js"></script>
+<script type="text/javascript" src="../../js/common-http.js"></script>
+<script type="text/javascript" src="../../js/common-service.js"></script>
+<script type="text/javascript" src="../../js/ui-im-dialog.js"></script>
+<script type="text/javascript" src="../../js/common-socket.js"></script>
+
+<script src="js/statistics.js"></script>
+
+</body>
+</html>

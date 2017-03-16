@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>智能信息弹窗</title>
+    <link rel="stylesheet" href="../../css/cross.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="css/user-msg.css">
+</head>
+<body>
+    <div class="um-pop-body">
+        <div class="um-pop-mian">
+            <a class="um-c" href="javascript:void(0)"></a>
+            <h2 class="um-pop-tit">您有新的<span class="j-um-w">血糖</span>消息</h2>
+            <div class="um-pop-con">
+                <div class="um-pop-con-m">
+                    <!--血糖弹窗-->
+
+                    <!--&lt;!&ndash;血糖偏低&ndash;&gt;-->
+                    <!--<p><span class="um-time">18:03</span> 测量的血糖为<span class="um-xt">1.8</span>mmol/L</p>-->
+                    <!--<p>您的<span class="um-s">血糖偏低</span>，建议立即进食补充糖分。必要时请咨询您的家庭医生，建议继续密切监测血糖。</p>-->
+                    <!--&lt;!&ndash;血糖正常&ndash;&gt;-->
+                    <!--<p><span class="um-time">18:03</span> 测量的血糖为<span class="um-xt norm">5.8</span>mmol/L</p>-->
+                    <!--<p>您的<span class="um-s norm">血糖正常</span>，建议立即进食补充糖分。必要时请咨询您的家庭医生，建议继续密切监测血糖。</p>-->
+                    <!--&lt;!&ndash;血糖偏高&ndash;&gt;-->
+                    <!--<p><span class="um-time">18:03</span> 测量的血糖为<span class="um-xt hei">10.8</span>mmol/L</p>-->
+                    <!--<p>您的<span class="um-s hei">血糖偏高</span>，建议立即进食补充糖分。必要时请咨询您的家庭医生，建议继续密切监测血糖。</p>-->
+
+
+                    <!--血压弹窗-->
+                    <!--低-->
+                    <!--<p><span class="um-time">18:03</span> 测量的血压数据为</p>-->
+                    <!--<p class="um-bp">舒张压：<span class="um-s">50</span>kpa</p>-->
+                    <!--<p class="um-bp">收缩率：<span class="um-s">50</span>kpa</p>-->
+                    <!--<p class="um-bp">心&nbsp;&nbsp;&nbsp;率：<span class="um-s">50</span>kpa</p>-->
+                    <!--&lt;!&ndash;正常&ndash;&gt;-->
+                    <!--<p><span class="um-time">18:03</span> 测量的血压数据为</p>-->
+                    <!--<p class="um-bp">舒张压：<span class="um-s norm">50</span>kpa</p>-->
+                    <!--<p class="um-bp">收缩率：<span class="um-s norm">50</span>kpa</p>-->
+                    <!--<p class="um-bp">心&nbsp;&nbsp;&nbsp;率：<span class="um-s norm">50</span>kpa</p>-->
+                    <!--&lt;!&ndash;高&ndash;&gt;-->
+                    <!--<p><span class="um-time">18:03</span> 测量的血压数据为</p>-->
+                    <!--<p class="um-bp">舒张压：<span class="um-s hei">50</span>kpa</p>-->
+                    <!--<p class="um-bp">收缩率：<span class="um-s hei">50</span>kpa</p>-->
+                    <!--<p class="um-bp">心&nbsp;&nbsp;&nbsp;率：<span class="um-s hei">50</span>kpa</p>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script id="umBsTmp" type="text/html">
+        <p><span class="um-time">{{time}}</span> 测量的血糖为<span class="um-xt {{staclass}}">{{bsnum}}</span>mmol/L</p>
+        <p>您的<span class="um-s {{staclass}}">{{statecon}}</span>，{{content}}</p>
+    </script>
+    <script id="umBpTmp" type="text/html">
+        <p><span class="um-time">{{time}}</span> 测量的血压数据为</p>
+        <p class="um-bp">舒张压：<span class="um-s {{staclass}}">{{sznum}}</span>kpa</p>
+        <p class="um-bp">收缩率：<span class="um-s {{staclass}}">{{ssnum}}</span>kpa</p>
+        <p class="um-bp">心&nbsp;&nbsp;&nbsp;率：<span class="um-s {{staclass}}">{{xnum}}</span>kpa</p>
+    </script>
+
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="js/user-msg.js"></script>
+</body>
+</html>

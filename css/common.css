@@ -1,0 +1,37 @@
+/* 自定义宽度 */
+.w1920 { width: 1920px; }
+.h1080 { height: 1080px; }
+
+/* 容器 */
+
+
+/* 滚动条样式 */
+::-webkit-scrollbar-track {
+    background-color:transparent
+}
+::-webkit-scrollbar {
+    width:6px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 5px;
+}
+
+.um-pop-mian { position: fixed; z-index: 9999; width: 460px; height: 326px; right: 20px; bottom: 20px; background-image: url(../img/zhineng_bg.png); background-repeat: no-repeat; background-position: center; background-size: cover; margin-top: -163px; margin-left: -230px; color: #fff; }
+
+.um-c { display: block; position: absolute; width: 40px; height: 46px; background-image: url(../img/guanbi_btn.png); background-repeat: no-repeat; background-position: center; background-size: contain; top: -23px; right: -11px; }
+.um-c:hover { background-image: url(../img/guanbi_pre.png); background-repeat: no-repeat; background-position: center; background-size: contain; }
+
+.um-pop-tit { height: 45px; padding-top: 15px; padding-left: 44px; line-height: 45px; font-size: 25px; font-weight: 600; }
+
+.um-pop-con { position: relative; width: 460px; height: 266px; overflow: hidden; }
+.um-pop-con div { position: absolute; left: 44px; top: 25px; right: 44px; bottom: 30px; overflow: auto; }
+.um-pop-con div p { font-size: 20px; padding: 10px 0; line-height: 35px; }
+.um-pop-con div p.um-bp { padding: 0; }
+
+.um-s.lower, .um-xt.lower { color: #00ffff; }
+.um-s.normal, .um-xt.normal { color: #04f17f; }
+.um-s.heigher, .um-xt.heigher { color: #ff69ff; }
+
+.um-xt { font-size: 40px; font-weight: 600; vertical-align: bottom; padding: 0 10px; }

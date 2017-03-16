@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+    <link rel="stylesheet" href="../../css/cross.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/animate.css">
+    <link rel="stylesheet" href="../../css/ui-dialog.min.css">
+    <link rel="stylesheet" href="css/user-info.css?v=1.1">
+</head>
+<body>
+    <div class="j-pop-body" id="info_wrap">
+        <div class="pop-main">
+            <a class="j-pop-btn-c" href="javascript:void(0);" @click="goBack()"></a>
+            <h2 class="pop-tit">个人信息</h2>
+            <h3 class="j-pop-u-info">
+                <label>姓名：{{patient.name}}</label>
+		        <label>性别：{{patient.sex=='1'?'男':'女'}}</label>
+		        <label>年龄：{{patient.age}}</label>
+            </h3>
+            <div class="pop-nav">
+                <a class="j-pop-nv-btn-l" href="javascript:void(0);" style="display: none;"></a>
+                <div class="pop-nav-con">
+                    <ul class="j-pop-nav-list">
+                        <li v-for="(item, index) in medicalHistory"
+                            v-bind:class="index==0?'n-active' : ''"
+                            @click="activeNavItem(index,$event)">{{item.label}}</li>
+                    </ul>
+                </div>
+                <a class="j-pop-nv-btn-r" href="javascript:void(0);" style="display: none;"></a>
+            </div>
+            <div class="j-pop-cons">
+                <!--&lt;!&ndash;文章&ndash;&gt;-->
+                 <div class="j-pop-con"  
+                 	v-for="(item, index) in medicalHistory"
+                    v-bind:class="index==0?'' : 'c-hide'">
+                        <p>{{item.content}}</p>
+                 </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../js/vue.js"></script>
+    <script type="text/javascript" src="../../js/underscore.js"></script>
+    <script type="text/javascript" src="../../js/es6-promise.js"></script>
+    <script type="text/javascript" src="../../js/dialog-plus.min.js"></script>
+    <script type="text/javascript" src="../../js/common-util.js"></script>
+    <script type="text/javascript" src="../../js/common-http.js"></script>
+    <script type="text/javascript" src="../../js/common-service.js"></script>
+    <script type="text/javascript" src="../../js/ui-im-dialog.js"></script>
+    <script type="text/javascript" src="../../js/common-socket.js"></script>
+    <script type="text/javascript" src="js/user-info.js?v=1.1"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>查看患病详情</title>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../css/cross.css" type="text/css"/>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/ui-dialog.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/resident-timeline.css">
+    <link rel="stylesheet" href="css/resident-see-doctor.css">
+    <link rel="stylesheet" href="css/health-blood.css">
+</head>
+<body>
+    <div class="common-bg" id="seedoctor_app">
+
+        <div class="header clearfix">
+            <a class="backbtn btn-before" href="javascript:history.go(-1);"></a>
+            <a class="backbtn btn-index" href="../home/home.html"></a>
+        </div>
+
+        <ul class="see-menu clearfix">
+            <li>
+                <div class="card-top font">
+                    <p>{{sickYear}}</p>
+                    <p>年</p>
+                </div>
+                <div class="card-bot">
+                    <div class="icon-img"></div>
+                    <p class="num">患病年数</p>
+                </div>
+            </li>
+            <li>
+                <div class="card-top font">
+                    <p>{{seeTimer}}</p>
+                    <p>次</p>
+                </div>
+                <div class="card-bot">
+                    <div class="icon-img"></div>
+                    <p class="num">就诊次数</p>
+                </div>
+            </li>
+            <li>
+                <div class="card-top font">
+                    <p>{{hosTimer}}</p>
+                    <p>次</p>
+                </div>
+                <div class="card-bot">
+                    <div class="icon-img"></div>
+                    <p class="num">住院次数</p>
+                </div>
+            </li>
+            <li>
+                <div class="card-top text">
+                    <p>{{newseeEve.time}}&#x3000;就诊</p>
+                    <p>{{newseeEve.orgName}}</p>
+                </div>
+                <div class="card-bot">
+                    <p class="num">最近一次就诊事件</p>
+                </div>
+            </li>
+            <li>
+                <div class="card-top text">
+                    <p>
+                        <span v-for="(item,index) in medicine">{{item.value}}</span>
+                    </p>
+                </div>
+                <div class="card-bot">
+                    <p class="num">常用药物</p>
+                </div>
+            </li>
+        </ul>
+
+        <ul id="see_type" class="see-type clearfix">
+            <li class="active" data-id="0">就诊事件</li>
+            <li data-id="1">历史检查情况</li>
+            <li data-id="2">体征指标动态</li>
+        </ul>
+
+        <div class="see-section-bg">
+
+            <section v-show="showSection == '0'">
+                <div class="timeline see-timeline">
+                    <div class="time-select clearfix">
+                        <a id="beforebtn" class="beforebtn" href="javascript:;"></a>
+                        <div id="frame" class="year-show">
+                            <ul class="slidee clearfix year-list">
+                                <li v-for="(item,index) in arrYearBack" :data-year='index'>{{item}}年</li>
+                            </ul>
+                        </div>
+                        <a id="afterbtn" class="afterbtn" href="javascript:;"></a>
+                    </div>
+                </div>
+                <div class="time-tree clearfix see-time-tree">
+                    <ul id="tree_year" class="tree-year">
+                        <li v-for="(items,index) in arrYearData" class="one">
+                            <div class="year">{{arrYear[index]}}年</div>
+                            <div :data-id="index" class="showbtn j-showBtn"></div>
+                            <div v-for="(item,index) in items" class="tree-detail j-treeDetail">
+                                <div class="time"><span>{{item.time}}</span></div>
+                                <div class="icon-img">
+                                    <div v-if="item.typeName=='住院'" class="img zhuyuan"></div>
+                                    <div v-else class="img menzhen"></div>
+                                </div>
+                                <ul class="sick-content">
+                                    <li>{{item.typeName}}</li>
+                                    <li>{{item.diagnosis}}</li>
+                                    <li>{{item.orgName}}</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <div id="see_line_height" class="tree-line"></div>
+                </div>
+            </section>
+
+            <section v-show="showSection == '1'">
+                <div class="timeline see-timeline">
+                    <div class="time-select clearfix">
+                        <a id="beforebtn2" class="beforebtn" href="javascript:;"></a>
+                        <div id="frame2" class="year-show">
+                            <ul class="slidee clearfix year-list">
+                                <li v-for="(item,index) in arrYearBackHis" :data-year='index'>{{item}}年</li>
+                            </ul>
+                        </div>
+                        <a id="afterbtn2" class="afterbtn" href="javascript:;"></a>
+                    </div>
+                </div>
+                <div class="time-tree clearfix see-time-tree">
+                    <ul id="tree_year2" class="tree-year">
+                        <li v-for="(items,index) in arrYearDataHis" class="one">
+                            <div class="year">{{arrYearHis[index]}}年</div>
+                            <div :data-id="index" class="showbtn j-showBtn"></div>
+                            <div v-for="(item,index) in items" class="tree-detail j-treeDetail">
+                                <div class="time"><span>{{item.time}}</span></div>
+                                <div class="icon-img">
+                                    <div v-if="item.cataLogCodeName=='住院'" class="img zhuyuan"></div>
+                                    <div v-else class="img menzhen"></div>
+                                </div>
+                                <ul class="sick-content">
+                                    <li>{{item.cataLogCodeName}}</li>
+                                    <li style="max-width: inherit;">{{item.orgName}}</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <div id="see_line_height2" class="tree-line"></div>
+                </div>
+            </section>
+
+            <section v-show="showSection == '2'">
+                <div style="padding: 20px 0px" class="ovh">
+                    <ul class="sub-nav-list ovh mt20 ml50" id="bloodTypeSrc">
+                        <li class="blood-glocose active">空腹血糖</li>
+                        <li class="blood-glocose">早餐后血糖</li>
+                        <li class="blood-glocose">午餐前血糖</li>
+                        <li class="blood-glocose">午餐后血糖</li>
+                        <li class="blood-glocose">晚餐前血糖</li>
+                        <li class="blood-glocose">晚餐后血糖</li>
+                        <li class="blood-glocose">睡前血糖</li>
+                        <li class="blood-press" style="display: none;">舒张压</li>
+                        <li class="blood-press" style="display: none;">收缩压</li>
+                        <li class="blood-press" style="display: none;">心率</li>
+                    </ul>
+                    <ul class="sub-nav-list ovh mt20 ml50" id="timeTypeSrc">
+                        <li class="sub-nav-time active">近一个月</li>
+                        <li class="sub-nav-time">近半年</li>
+                        <li class="sub-nav-time">近一年</li>
+                    </ul>
+                    <div id="statistics" class="statistics-box ovh">
+                        <div class="statistics-item fl">
+                            <div class="statistics-img fl" style="background: #ef69fe;"></div>
+                            <div class="statistics-txt fl" style="color: #ef69fe;">
+                                <span>偏高</span>
+                                <span class="statistics-num" id="statisticsHigh">20</span>
+                                次
+                            </div>
+                        </div>
+                        <div class="statistics-item fl">
+                            <div class="statistics-img fl" style="background: #06e682;"></div>
+                            <div class="statistics-txt fl" style="color: #06e682;">
+                                <span>正常</span>
+                                <span class="statistics-num" id="statisticsNormal">20</span>
+                                次
+                            </div>
+                        </div>
+                        <div class="statistics-item fl">
+                            <div class="statistics-img fl" style="background: #00ffff;"></div>
+                            <div class="statistics-txt fl" style="color: #00ffff;">
+                                <span>偏低</span>
+                                <span class="statistics-num" id="statisticsLow">20</span>
+                                次
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-canvas">
+                        <div id="glucoseChart" style="width:1840px;height: 602px;"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../js/vue.js"></script>
+    <script type="text/javascript" src="../../js/underscore.js"></script>
+    <script type="text/javascript" src="../../js/es6-promise.js"></script>
+    <script type="text/javascript" src="../../js/dialog-plus.min.js"></script>
+    <script type="text/javascript" src="../../js/common-util.js"></script>
+    <script type="text/javascript" src="../../js/common-http.js"></script>
+    <script type="text/javascript" src="../../js/common-service.js"></script>
+    <script type="text/javascript" src="../../js/common-socket.js"></script>
+    <script type="text/javascript" src="../../js/sly.js"></script>
+    <script src="js/resident-seedoctor.js"></script>
+    <script src="../../js/echarts.js"></script>
+    <script src="js/health-blood.js"></script>
+    
+</body>
+</html>

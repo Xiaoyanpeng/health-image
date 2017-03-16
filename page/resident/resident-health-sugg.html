@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>健康建议</title>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../css/cross.css" type="text/css"/>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/ui-dialog.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/animate.css">
+    <link rel="stylesheet" href="css/resident-health-sugg.css">
+</head>
+<body>
+    <div id="suggest_app" class="common-bg">
+        <div class="header clearfix">
+            <a class="backbtn btn-before" href="javascript:history.go(-1);"></a>
+            <a class="backbtn btn-index" href="../home/home.html"></a>
+        </div>
+
+        <ul class="sugg-list clearfix">
+            <li v-for="(item,index) in suggHeader">
+                <div class="text">
+                    <p>{{item.typeName}}建议</p>
+                    <p>{{item.content}}</p>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="sugg-small-tag">
+            <a v-for="(item,index) in allServices" class="tag" target="_blank" :href="item.value"><li>{{item.key}}</li></a>
+        </ul>
+
+        <div class="sugg-article">
+            <div id="frame" class="arti-list">
+                <ul class="slidee clearfix">
+                    <li v-for="(value, key) in suggAllMsg">
+                        <div class="title">{{key}}新招：</div>
+                        <div class="content">
+                            <p v-for="item in value">{{item.content}}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a id="beforebtn" class="beforebtn arti-left" style="display:none;" href="javascript:;"></a>
+            <a id="afterbtn" class="afterbtn arti-right" href="javascript:;"></a>
+        </div>
+        
+    </div>
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../js/vue.js"></script>
+    <script type="text/javascript" src="../../js/underscore.js"></script>
+    <script type="text/javascript" src="../../js/es6-promise.js"></script>
+    <script type="text/javascript" src="../../js/dialog-plus.min.js"></script>
+    <script type="text/javascript" src="../../js/common-util.js"></script>
+    <script type="text/javascript" src="../../js/common-http.js"></script>
+    <script type="text/javascript" src="../../js/common-service.js"></script>
+    <script type="text/javascript" src="../../js/common-socket.js"></script>
+    <script type="text/javascript" src="../../js/sly.js"></script>
+    <script src="js/resident-healthsugg.js"></script>
+</body>
+</html>

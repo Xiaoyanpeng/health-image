@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <title>首页</title>
+	    <meta name="format-detection" content="telephone=no"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+		<link rel="stylesheet" href="../../css/cross.css" type="text/css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/animate.css">
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+    	<link rel="stylesheet" type="text/css" href="css/home.css">
+	</head>
+	<body class="w1920 h1080 container">
+		<ul id="main" class="c-blocks-2 w1920">
+            <li class="c-t-center animated flipInY" data-animation-file="region-health-animation.html" style="animation-duration: 1.5s;">
+            	<p class="c-position-r" >
+            		<img src="img/quyu_img.png" class="bg-img " />
+            		<img src="img/quyu_btn.png" class="link-btn"/>
+            	</p>
+            </li>
+            <li class="c-t-center animated flipInY" data-animation-file="resident-health-animation.html" style="animation-duration: 1.5s;">
+            	<p class="c-position-r">
+            		<img src="img/juming_img.png" class="bg-img" />
+            		<img src="img/juming_btn.png" class="link-btn"/>
+            	</p>
+            </li>
+        </ul>
+        <div id="page_animation">
+        	<webview src="index.html" webpreferences="sandbox=true" nodeintegration plugins class="w1920 h1080 hide"></webview>
+        </div>
+		<script src="../../js/jquery.js"></script>
+    	<script src="../../js/vue.js"></script>
+    	<script src="js/home.js"></script>
+	</body>
+</html>

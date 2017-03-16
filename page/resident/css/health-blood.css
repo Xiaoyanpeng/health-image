@@ -1,0 +1,112 @@
+.ovh{
+	overflow: hidden;
+	position: relative;
+}
+
+.sub-nav-line {
+	width: 1460px;
+	height: 1px;
+	background: #4689b2;
+	position: absolute;
+	left: 380px;
+	bottom: 1px;
+}
+
+.sub-nav-a,.sub-nav-b {
+	text-align: center;
+	color: #5ac4eb;
+	font-size: 30px;
+	font-weight: bold;
+	width: 190px;
+	height: 60px;
+	display: block;
+	line-height: 60px;
+	background: url("../img/xuetangxueya02_bg.png");
+}
+
+.sub-nav-a.active{
+	background: url("../img/xuetangxueya01_bg.png");
+	color: #fff;
+}
+
+.sub-nav-b {
+	background: url("../img/xuetangxueya01_bg.png");
+	background-position: 190px 0;
+}
+
+.sub-nav-b.active{
+	background: url("../img/xuetangxueya02_bg.png");
+	background-position: 190px 0;
+	color: #fff;
+}
+
+
+.sub-nav-b:hover {
+	background: url("../img/xuetangxueya02_bg.png");
+	background-position: 190px 0;
+	color:#fff
+}
+
+.sub-nav-list li{
+	width: 140px;
+	height: 46px;
+	line-height: 46px;
+	text-align: center;
+	cursor: pointer;
+	float: left;
+	color: #5ac4eb;
+	margin-right: 20px;
+	background: url("../img/biaoqian_btn.png");
+}
+
+.sub-nav-list li:hover{
+	color: #fff;
+	background: url("../img/biaoqian_pre.png");
+}
+
+.chart-canvas {
+	width: 100%;
+	box-sizing: border-box;
+	height: 620px;
+	margin-top: 10px;
+}
+
+.sub-nav span{
+	cursor: pointer;
+}
+
+.sub-nav-list li.active{
+	background: url("../img/biaoqian_pre.png");
+	color: #fff;
+}
+
+.sub-nav {
+	cursor: pointer;
+}
+
+.sub-nav-list li{
+	font-size: 24px;
+}
+
+.statistics-box {
+	height: 26px;
+	line-height: 26px;
+	position: absolute;
+	right: 30px;
+	top: 120px;
+}
+
+.statistics-img {
+	width: 26px;
+	height: 26px;
+	margin-right: 10px;
+	border-radius: 50%;
+}
+
+.statistics-num {
+	margin-left: 20px;
+}
+
+.statistics-item {
+	margin-right: 40px;
+}

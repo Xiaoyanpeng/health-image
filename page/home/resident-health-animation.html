@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>健康画像DEMO</title>
+    <style>
+      html,body,embed { padding: 0; margin: 0; width: 100%; height: 100%; }
+    </style>
+  </head>
+  <body>
+  <embed style="display:block;"
+ type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"  src="swf/jumin.swf" id="_AdSame_Flash650"  loop="false"
+ name="_AdSame_Flash650" quality="high">
+
+	<script>
+    var ipcRenderer;
+    if(window.require) {
+    	ipcRenderer = window.require('electron').ipcRenderer
+    }
+		var myflash = document.getElementById('_AdSame_Flash650');
+	  var timmer = setInterval(function() {
+	    if(!myflash.IsPlaying()){
+	      clearInterval(timmer);
+	      timmer = null; 
+        
+        if(ipcRenderer) {
+	      	ipcRenderer.sendToHost('../resident/resident-index.html');
+	      } else {
+	      	window.location.href = '../resident/resident-index.html';
+	      }
+	    }
+	  },30)
+	</script>
+  </body>
+
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>健康档案</title>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../css/cross.css" type="text/css"/>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/ui-dialog.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/resident-timeline.css">
+</head>
+<body>
+    <div class="common-bg" id="health_app">
+        <div class="header clearfix">
+            <a class="backbtn btn-before" href="javascript:history.go(-1);"></a>
+            <a class="backbtn btn-index" href="../home/home.html"></a>
+        </div>
+        <div class="timeline">
+            <div class="time-select clearfix">
+                <a id="beforebtn" class="beforebtn" href="javascript:;"></a>
+                <div id="frame" class="year-show">
+                    <ul class="slidee clearfix year-list">
+                        <li v-for="(item,index) in arrYearBack" :data-year='index'>{{item}}年</li>
+                    </ul>
+                </div>
+                <a id="afterbtn" class="afterbtn" href="javascript:;"></a>
+            </div>
+        </div>
+    
+        <div class="time-tree clearfix">
+            <ul id="tree_year" class="tree-year">
+                <li v-for="(items,index) in arrYearData" class="one">
+                    <div class="year">{{arrYear[index]}}年</div>
+                    <div :data-id="index" class="showbtn j-showBtn"></div>
+                    <div v-for="(item,index) in items" class="tree-detail j-treeDetail">
+                        <div class="time"><span>{{item.time}}</span></div>
+                        <div class="icon-img">
+                            <div v-if="item.typeName=='住院'" class="img zhuyuan"></div>
+                            <div v-else class="img menzhen"></div>
+                        </div>
+                        <ul class="sick-content">
+                            <li>{{item.typeName}}</li>
+                            <li>{{item.diagnosis}}</li>
+                            <li>{{item.orgName}}</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div id="line_height" class="tree-line"></div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../js/vue.js"></script>
+    <script type="text/javascript" src="../../js/underscore.js"></script>
+    <script type="text/javascript" src="../../js/es6-promise.js"></script>
+    <script type="text/javascript" src="../../js/dialog-plus.min.js"></script>
+    <script type="text/javascript" src="../../js/common-util.js"></script>
+    <script type="text/javascript" src="../../js/common-http.js"></script>
+    <script type="text/javascript" src="../../js/common-service.js"></script>
+    <script type="text/javascript" src="../../js/common-socket.js"></script>
+    <script type="text/javascript" src="../../js/sly.js"></script>
+    <script src="js/resident-timeline.js"></script>
+</body>
+</html>

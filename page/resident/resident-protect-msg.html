@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>防治知识</title>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../css/cross.css" type="text/css"/>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/ui-dialog.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/animate.css">
+    <link rel="stylesheet" href="css/resident-health-sugg.css">
+    <style>
+        .content.prot-content P,.content.prot-content span,.content.prot-content strong,.content.prot-content section{
+            color:#fff !important;
+            background: none !important;
+            font-size: 24px !important;
+            line-height: 2em;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="common-bg" id="articles_app">
+        <div class="header clearfix">
+            <a class="backbtn btn-before" href="javascript:history.go(-1);"></a>
+            <a class="backbtn btn-index" href="../home/home.html"></a>
+        </div>
+
+        <div class="sugg-article prot-article">
+            <div id="frame" class="arti-list prot-list">
+                <ul class="slidee clearfix">
+                    <li class="prot-bg" v-for="item in articles">
+                        <div class="title">{{item.title}}</div>
+                        <div class="content prot-content" v-html="item.content"></div>
+                    </li>
+                </ul>
+            </div>
+            <a id="beforebtn" class="beforebtn arti-left" style="display:none;" href="javascript:;"></a>
+            <a id="afterbtn" class="afterbtn arti-right" href="javascript:;"></a>
+        </div>
+        
+    </div>
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../js/vue.js"></script>
+    <script type="text/javascript" src="../../js/underscore.js"></script>
+    <script type="text/javascript" src="../../js/es6-promise.js"></script>
+    <script type="text/javascript" src="../../js/dialog-plus.min.js"></script>
+    <script type="text/javascript" src="../../js/common-util.js"></script>
+    <script type="text/javascript" src="../../js/common-http.js"></script>
+    <script type="text/javascript" src="../../js/common-service.js"></script>
+    <script type="text/javascript" src="../../js/common-socket.js"></script>
+    <script type="text/javascript" src="../../js/sly.js"></script>
+    <script src="js/resident-protect-msg.js"></script>
+</body>
+</html>

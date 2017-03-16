@@ -1,0 +1,315 @@
+.container {
+	width: 1920px;
+	height: 1080px;
+	background: url("../../../img/xitong_bg.png");
+	margin: 0 auto;
+	padding: 28px 40px 40px 40px;
+	box-sizing: border-box;
+	overflow: hidden;
+	position: relative;
+}
+/*.container::before{*/
+	/*content: '';*/
+	/*width: 100%;*/
+	/*height: 150px;*/
+	/*position: absolute;*/
+	/*top: 55px;*/
+	/*left: 0;*/
+	/*z-index: 99999;*/
+	/*background: linear-gradient(rgba(0,0,0,.0), rgba(12, 31, 46, 0.6),rgba(0,0,0,0));*/
+/*}*/
+.ovh{
+	overflow: hidden;
+	position: relative;
+}
+.main-nav {
+	padding-bottom: 60px;
+}
+
+.pre-page,.back-home {
+	width: 128px;
+	height: 44px;
+	display: block;
+}
+.pre-page{
+	background: url("../../../img/fanhui_btn.png");
+}
+.back-home {
+	background: url("../../../img/fanhuishouye_btn.png");
+}
+.back-home:hover {
+	background: url("../../../img/fanhuishouye_pre.png");
+}
+
+.sub-nav-line {
+	width: 1460px;
+	height: 1px;
+	background: #4689b2;
+	position: absolute;
+	left: 380px;
+	bottom: 1px;
+}
+
+.sub-nav-a,.sub-nav-b {
+	text-align: center;
+	color: #5ac4eb;
+	font-size: 30px;
+	font-weight: bold;
+	width: 190px;
+	height: 60px;
+	display: block;
+	line-height: 60px;
+	background: url("../img/xuetangxueya02_bg.png");
+}
+
+.sub-nav-a.active{
+	background: url("../img/xuetangxueya01_bg.png");
+	color: #fff;
+}
+
+.sub-nav-b {
+	background: url("../img/xuetangxueya01_bg.png");
+	background-position: 190px 0;
+}
+
+.sub-nav-b.active{
+	background: url("../img/xuetangxueya02_bg.png");
+	background-position: 190px 0;
+	color: #fff;
+}
+
+
+.sub-nav-b:hover {
+	background: url("../img/xuetangxueya02_bg.png");
+	background-position: 190px 0;
+	color:#fff
+}
+
+.sub-nav-list li{
+	width: 140px;
+	height: 46px;
+	line-height: 46px;
+	text-align: center;
+	cursor: pointer;
+	float: left;
+	color: #5ac4eb;
+	margin-right: 20px;
+	background: url("../img/biaoqian_btn.png");
+}
+
+.sub-nav-list li:hover{
+	color: #fff;
+	background: url("../img/biaoqian_pre.png");
+}
+
+.chart-canvas {
+	width: 100%;
+	box-sizing: border-box;
+	height: 620px;
+	margin-top: 64px;
+}
+
+/*健康区域*/
+.title-bg {
+	width: 1920px;
+	height: 102px;
+	background: url("../img/biaoti_icon.png");
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.main-title {
+	width: 691px;
+	height: 54px;
+	background: url('../img/xiaobiaoti_icon.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 30px auto 0;
+	font-size: 36px;
+	color: #fff;
+	position: relative;
+}
+
+.main-title-txt {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.main-content {
+	width: 100%;
+	padding: 0 40px;
+	margin-top: 60px;
+	box-sizing: border-box;
+	margin-bottom: 100px;
+}
+
+.main-content-left {
+	width: 1216px;
+	height: 751px;
+	background: url("../img/kuangjia1_icon.png");
+}
+
+.main-content-right {
+	width: 505px;
+	height: 751px;
+	background: url("../img/kuangjia2_icon.png");
+}
+
+
+.health-area {
+	width: 100%;
+	height: 100%;
+}
+
+.main-content-right-txt {
+	color: #fff;
+	padding:60px 30px;
+	font-size: 20px;
+	line-height: 2em;
+}
+
+.are-content-left {
+	cursor: pointer;
+	width: 1170px;
+	height: 758px;
+	background: url("../img/BG3.png");
+}
+
+.are-content-right {
+	width: 533px;
+	height: 758px;
+	background: url("../img/BG4.png");
+}
+
+.xm-map {
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	padding: 30px;
+	box-sizing: border-box;
+}
+
+.xm-map-msg {
+	color: #fff;
+	font-size: 24px;
+	position: absolute;
+}
+.xm-map-msg strong{
+	display: block;
+}
+.xm-map-msg span{
+	font-size: 30px;
+	color: #ffde00;
+	font-weight: bold;
+}
+
+.age-content {
+	width: 1759px;
+	height: 793px;
+	margin: 80px auto 100px;
+	background: url("../img/BG5.png");
+}
+
+.age-left {
+	display: none;
+	width: 442px;
+	height: 672px;
+	background: url("../img/renwu_icon.png");
+	margin: 80px 20px 0 80px;
+}
+
+.age-right {
+	width: 1140px;
+	padding-top: 80px;
+}
+
+.age-right-img-list img{
+	display: block;
+}
+
+.age-right-img-item{
+	margin-right: 140px;
+}
+
+.age-right-img-item {
+	float: left;
+	text-align: center;
+	color: #fff;
+	font-size: 30px;
+	display: none;
+}
+.age-right-img-item:last-child{
+	margin-right: 0;
+}
+.age-right-img-item .line1{
+	margin-top: 20px;
+}
+.age-right-img-item .line2{
+	color: #44f4ff;
+}
+
+.age-right-msg {
+	margin-top: 120px;
+	width: 1029px;
+	height: 285px;
+	background: url("../img/wenziBG_icon.png");
+	color: #fff;
+	line-height: 2em;
+	padding: 40px;
+	box-sizing: border-box;
+	font-size: 20px;
+}
+
+.statistics-box {
+	height: 26px;
+	line-height: 26px;
+	position: absolute;
+	right: 30px;
+	top: 370px;
+}
+
+.statistics-img {
+	width: 26px;
+	height: 26px;
+	margin-right: 10px;
+	border-radius: 50%;
+}
+
+.statistics-txt {
+	
+}
+
+.statistics-num {
+	margin-left: 20px;
+}
+
+.statistics-item {
+	margin-right: 40px;
+}
+
+.sub-nav span{
+	cursor: pointer;
+}
+
+.sub-nav-list li.active{
+	background: url("../img/biaoqian_pre.png");
+	color: #fff;
+}
+
+.sub-nav {
+	cursor: pointer;
+}
+
+.main-wrap {
+	width:1880px;
+	height: 900px;
+	overflow: auto;
+	margin-top: 100px;
+}
+
+.sub-nav-list li{
+	font-size: 24px;
+}

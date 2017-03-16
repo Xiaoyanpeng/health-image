@@ -1,0 +1,8 @@
+.container { background: url(../img/shouye_bg.png) no-repeat; background-size: 1920px; }
+.link-btn { position: absolute; bottom: 80px; left: 50%; margin-left: -130px; cursor: pointer; }
+webview.hide {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	opacity: 0
+}

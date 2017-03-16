@@ -1,0 +1,132 @@
+.noselect{
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+.dot{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.cur{
+    cursor: pointer;
+}
+.moredot(@clamp:2){
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: @clamp;
+    -webkit-box-orient: vertical;
+}
+.posi-alt(@left;@top){
+    position: absolute;
+    top:@top;
+    left:@left;
+}
+.posi-alb(@left;@bottom){
+    position: absolute;
+    bottom:@bottom;
+    left:@left;
+}
+.posi-arb(@right;@bottom){
+    position: absolute;
+    bottom:@bottom;
+    right:@right;
+}
+.posi-art(@right;@top){
+    position: absolute;
+    top:@top;
+    right:@right;
+}
+.posi-rlt(@left;@top){
+    position: relative;
+    top:@top;
+    left:@left;
+}
+.posi-rlb(@left;@bottom){
+    position: relative;
+    bottom: @bottom;
+    left:@left;
+}
+.posi-rrt(@right;@top){
+    position: relative;
+    top:@top;
+    right:@right;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.block{
+    display: block;
+}
+.none{
+    display: none;
+}
+.btton(@width;@height;@bgcolor:@color-red;@size:14px;@color:white;@radius:0px;){
+    width:@width;
+    height:@height;
+    line-height: @height - 1;
+    text-align: center;
+    border-radius:@radius;
+    cursor: pointer;
+    background-color: @bgcolor;
+    color:@color;
+    font-size: @size;
+}
+.bgimage(@url;@posi:center;@bgsize:contain;){
+    background: url(@url) no-repeat;
+    background-size: @bgsize;
+    background-position: @posi
+}
+.transform(@animate){
+    transform: @animate;
+    -webkit-transform: @animate;
+    -moz-transform: @animate;
+    -ms-transform:  @animate;
+    -o-transform:   @animate; 
+}
+.transition(@name:all;@duration:0s; @timing:ease; @delay:0s;){
+    transition: @name @duration @timing @delay;
+    -moz-transition: @name @duration @timing @delay;
+    -o-transition: @name @duration @timing @delay;
+    -webkit-transition:  @name @duration @timing @delay;
+}
+.font(@size:14px;@color:@color-black;){
+    font-size: @size;
+    color:@color;
+}
+.round(@w;@h;@bco:@color-red;){
+    width: @w;
+    height: @h;
+    border-radius: 50%;
+    background-color: @bco;
+}
+.vertical{
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display:-moz-box;
+    -moz-box-pack:center;
+    -moz-box-align:center;
+    display: -ms-flexbox;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ib{
+    display: inline-block;
+}
+.mid(@w;@h;){
+    width: @w;
+    height: @h;
+    .posi-alt(50%;50%);
+    margin-left: -(@w / 2);
+    margin-top: -(@h / 2);
+}

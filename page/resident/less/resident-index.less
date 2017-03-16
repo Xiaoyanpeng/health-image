@@ -1,0 +1,343 @@
+@import 'common.less';
+
+.resi-bgimage{
+    width: 1920px;
+    height: 1080px;
+    margin: 0 auto;
+    .bgimage('../img/huaxiang_bg.png');
+    position: relative;
+}
+.resi-sugg{
+    width: 524px;
+    height: 485px;
+    display: none;
+    .bgimage('../img/jiankangjianyi_bg.png');
+    .posi-alt(40px;140px);
+    .sugg-text{
+        padding: 40px 42px 0px 42px;
+        .title{
+            border-bottom:solid 1px #8a9dab;
+            padding-bottom: 25px;
+            margin-bottom: 15px;
+            div{
+                &:nth-child(1){
+                    .ib;
+                    .font(30px;#fff);
+                    margin-right: 16px;
+                    font-weight: bold;
+                    vertical-align: bottom;
+                }
+                &:nth-child(2){
+                    .ib;
+                    .font(20px;#55bbe1);
+                    vertical-align: bottom;
+                }
+            } 
+        }
+    }
+}
+.sugg-type{
+    li{
+        line-height: 40px;
+        .moredot;
+        .font(20px;#fff);
+        span{
+            &:nth-child(1){
+                .font(24px;#04f17f);
+            }
+            &:nth-child(2){
+                .font(20px;#fff);
+            }
+        }
+    }
+}
+.sugg-btn{
+    width: 120px;
+    height: 48px;
+    .bgimage('../img/chakanquanbu_btn.png');
+    &:hover{
+        background-image: url('../img/chakanquanbu_pre.png')
+    }
+    .posi-alb(202px;24px);
+}
+.resi-change{
+    .posi-alb(40px;20px);
+    .noselect;
+    .bgimg{
+        .ib;
+        width: 100px;
+        height: 130px;
+        margin-bottom: 46px;
+        .bgimage('../img/qiehuanshili_btn.png');
+        cursor: pointer;
+        &.active{
+            background-image: url('../img/qiehuanshili_pre.png');
+        }
+    }
+    .exam-list{
+        .none;
+        li{
+            width: 150px;
+            height: 240px;
+            margin-left: 40px;
+            .fl;
+            &.diabetes{
+                .bgimage('../img/kapian01_btn.png');
+                &.active,&:hover{
+                    .bgimage('../img/kapian01_pre.png');
+                }
+            }
+            &.highblood{
+                .bgimage('../img/kapian02_btn.png');
+                &.active,&:hover{
+                    .bgimage('../img/kapian02_pre.png');
+                }
+            }
+            &.older{
+                .bgimage('../img/kapian03_btn.png');
+                &.active,&:hover{
+                    .bgimage('../img/kapian03_pre.png');
+                }
+            }
+            &.man{
+                .bgimage('../img/kapian04_btn.png');
+                &.active,&:hover{
+                    .bgimage('../img/kapian04_pre.png');
+                }
+            }
+        }
+    }
+}
+
+.resi-more{
+    .posi-arb(40px;66px);
+    .noselect;
+    .more-list{
+        .none;
+        li{
+            width: 100px;
+            height: 100px;
+            margin-right: 40px;.fl;
+            cursor: pointer;
+            margin-bottom: 30px;
+            &.personal{
+                .bgimage('../img/gerenxinxi_btn.png');
+                &.active,&:hover{
+                    .bgimage('../img/gerenxinxi_pre.png');
+                }
+            }
+            &.record{
+                .bgimage('../img/tizhengjilu_btn.png');
+                &.active,&:hover{
+                    .bgimage('../img/tizhengjilu_pre.png');
+                }
+            }
+            &.file{
+                .bgimage('../img/jiankangdangan_btn.png');
+                &.active,&:hover{
+                    .bgimage('../img/jiankangdangan_pre.png');
+                }
+            }
+        }
+    }
+    .more-img{
+        .ib;
+        width: 100px;
+        height: 130px;
+        .bgimage('../img/chakangengduo_btn.png');
+        cursor: pointer;
+        &.active{
+            background-image: url('../img/chakangengduo_pre.png');
+        }
+    }
+}
+.resi-backbtn{
+    width: 128px;
+    height: 44px;
+    .bgimage('../../../img//fanhuishouye_btn.png');
+    &:hover{
+        background-image: url('../../../img//fanhuishouye_pre.png');
+    }
+    .posi-art(40px;20px);
+}
+.resi-tag{
+    width: 594px;
+    height: 577px;
+    display: none;
+    .bgimage('../img/biaoqianxiangqing_bg.png');
+    .posi-art(60px;110px);
+    .tag-main{
+        position: relative;
+    }
+    .title{
+        .font(30px;#fff);
+        font-weight: bold;
+        .posi-alt(162px;-40px);
+    }
+    .small-title{
+        .font(16px;#5ac4eb);
+        .posi-alt(13px;-28px);
+    }
+    .tag-close{
+        width: 40px;
+        height: 46px;
+        .bgimage('../../../img//guanbi_btn.png');
+        .posi-art(-20px;-10px);
+        &:hover{
+            background-image: url('../../../img//guanbi_pre.png');
+        }
+    }
+    .tag-list{
+        padding: 38px 20px 0px 34px;
+        li{
+            margin-bottom: 28px;
+            p:nth-child(1){
+                .font(24px;#06e97f);
+                font-weight: bold;
+                margin-bottom: 6px;
+            }
+            p:nth-child(2){
+                .font(20px;#fff);
+                line-height: 40px;
+                .moredot(3);
+            }
+            .recom{
+                .ib;
+                .font(20px;#fff);
+                line-height: 40px;
+                margin-right: 20px;
+                &:last-child{
+                    margin-right: 0px;
+                }
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .tag-btngroup{
+        .posi-alt(124px;516px);
+        .sick,.protect{
+            .ib;
+            width: 160px;
+            height: 48px;
+        }
+        .protect{
+            .bgimage('../img/fangzhizishi_btn.png');
+            &:hover{
+                background-image: url('../img/fangzhizishi_pre.png')
+            }
+        }
+        .sick{
+            .bgimage('../img/huanbingxiangqing_btn.png');
+            &:hover{
+                background-image: url('../img/huanbingxiangqing_pre.png')
+            }
+            margin-right: 40px;
+        }
+    }
+}
+.resi-people{
+    width: 580px;
+    height: 750px;
+    margin: 0px auto;
+    padding-top: 20px;
+    position: relative;
+    .title{
+        width: 288px;
+        height: 82px;
+        margin: 0 auto;
+        .bgimage('../img/pinggujieguo_img.png');
+    }
+    .people-type{
+        margin-top: -20px;
+        li{
+            width: 332px;
+            height: 620px;
+            margin: 0 auto;
+            &.diabetes{
+                .bgimage('../img/tangniaobing01_img.png');
+            }
+            &.highblood{
+                .bgimage('../img/gaoxueya01_img.png');
+            }
+            &.older{
+                .bgimage('../img/laonianren01_img.png');
+            }
+            &.man{
+                .bgimage('../img/zizhunan01_img.png');
+            }
+            &.woman{
+                .bgimage('../img/zizhunv01_img.png');
+            }
+        }
+    }
+    .result-tag{
+        li{
+            .font(28px;#abdbe9);
+            cursor: default;
+            .noselect;
+            opacity: 0.9;
+            &:nth-child(1){
+                .posi-alt(32px,272px);
+            }
+            &:nth-child(3){
+                .posi-alt(32px,488px);
+            }
+            &:nth-child(5){
+                .posi-alt(-5px,344px);
+                .font(32px;#ff69ff);
+            }
+            &:nth-child(7){
+                .posi-alt(32px,416px);
+            }
+            &:nth-child(9){
+                .posi-alt(82px,200px);
+            }
+            &:nth-child(11){
+                .posi-alt(66px,560px);
+            }
+            &:nth-child(2){
+                .posi-art(51px,293px);
+            }
+            &:nth-child(4){
+                .posi-art(54px,509px);
+            }
+            &:nth-child(6){
+                .posi-art(0px,437px);
+                .font(32px;#04f17f);
+            }
+            &:nth-child(8){
+                .posi-art(8px,365px);
+                .font(32px;#ffff00);
+            }
+            &:nth-child(10){
+                .posi-art(102px,581px);
+                .font(32px;#ff7065);
+            }
+            &:nth-child(12){
+                .posi-art(53px,221px);
+            }
+        }
+    }
+    .people-msg{
+        text-align: center;
+        margin-top: 22px;
+        li{
+            .ib;
+            .font(28px;#5ac4eb);
+            margin-right: 30px;
+            &:last-child{
+                margin-right: 0px;
+            }
+            .mw85{
+                min-width: 85px;
+                .ib;
+            }
+            .mw40{
+                .ib;
+                min-width: 40px;
+            }
+        }
+    }
+}

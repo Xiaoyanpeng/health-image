@@ -1,0 +1,523 @@
+.noselect {
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+.dot {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.cur {
+  cursor: pointer;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.block {
+  display: block;
+}
+.none {
+  display: none;
+}
+.vertical {
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  display: -ms-flexbox;
+  -ms-flex-pack: center;
+  -ms-flex-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ib {
+  display: inline-block;
+}
+.resi-bgimage {
+  width: 1920px;
+  height: 1080px;
+  margin: 0 auto;
+  background: url('../img/huaxiang_bg.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+}
+.resi-sugg {
+  width: 524px;
+  height: 485px;
+  display: none;
+  background: url('../img/jiankangjianyi_bg.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  top: 140px;
+  left: 40px;
+}
+.resi-sugg .sugg-text {
+  padding: 40px 42px 0px 42px;
+}
+.resi-sugg .sugg-text .title {
+  border-bottom: solid 1px #8a9dab;
+  padding-bottom: 25px;
+  margin-bottom: 15px;
+}
+.resi-sugg .sugg-text .title div:nth-child(1) {
+  display: inline-block;
+  font-size: 30px;
+  color: #ffffff;
+  margin-right: 16px;
+  font-weight: bold;
+  vertical-align: bottom;
+}
+.resi-sugg .sugg-text .title div:nth-child(2) {
+  display: inline-block;
+  font-size: 20px;
+  color: #55bbe1;
+  vertical-align: bottom;
+}
+.sugg-type li {
+  line-height: 40px;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 20px;
+  color: #ffffff;
+}
+.sugg-type li span:nth-child(1) {
+  font-size: 24px;
+  color: #04f17f;
+}
+.sugg-type li span:nth-child(2) {
+  font-size: 20px;
+  color: #ffffff;
+}
+.sugg-btn {
+  width: 120px;
+  height: 48px;
+  background: url('../img/chakanquanbu_btn.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  bottom: 24px;
+  left: 202px;
+}
+.sugg-btn:hover {
+  background-image: url('../img/chakanquanbu_pre.png');
+}
+.resi-change {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+.resi-change .bgimg {
+  display: inline-block;
+  width: 100px;
+  height: 130px;
+  margin-bottom: 46px;
+  background: url('../img/qiehuanshili_btn.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+}
+.resi-change .bgimg.active {
+  background-image: url('../img/qiehuanshili_pre.png');
+}
+.resi-change .exam-list {
+  display: none;
+}
+.resi-change .exam-list li {
+  width: 150px;
+  height: 240px;
+  margin-left: 40px;
+  float: left;
+}
+.resi-change .exam-list li.diabetes {
+  background: url('../img/kapian01_btn.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.resi-change .exam-list li.diabetes.active,
+.resi-change .exam-list li.diabetes:hover {
+  background: url('../img/kapian01_pre.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.resi-change .exam-list li.highblood {
+  background: url('../img/kapian02_btn.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.resi-change .exam-list li.highblood.active,
+.resi-change .exam-list li.highblood:hover {
+  background: url('../img/kapian02_pre.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.resi-change .exam-list li.older {
+  background: url('../img/kapian03_btn.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.resi-change .exam-list li.older.active,
+.resi-change .exam-list li.older:hover {
+  background: url('../img/kapian03_pre.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.resi-change .exam-list li.man {
+  background: url('../img/kapian04_btn.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.resi-change .exam-list li.man.active,
+.resi-change .exam-list li.man:hover {
+  background: url('../img/kapian04_pre.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.resi-more {
+  position: absolute;
+  bottom: 66px;
+  right: 40px;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+.resi-more .more-list {
+  display: none;
+}
+.resi-more .more-list li {
+  width: 100px;
+  height: 100px;
+  margin-right: 40px;
+  float: left;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+.resi-more .more-list li.personal {
+  background: url('../img/gerenxinxi_btn.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.resi-more .more-list li.personal.active,
+.resi-more .more-list li.personal:hover {
+  background: url('../img/gerenxinxi_pre.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.resi-more .more-list li.record {
+  background: url('../img/tizhengjilu_btn.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.resi-more .more-list li.record.active,
+.resi-more .more-list li.record:hover {
+  background: url('../img/tizhengjilu_pre.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.resi-more .more-list li.file {
+  background: url('../img/jiankangdangan_btn.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.resi-more .more-list li.file.active,
+.resi-more .more-list li.file:hover {
+  background: url('../img/jiankangdangan_pre.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.resi-more .more-img {
+  display: inline-block;
+  width: 100px;
+  height: 130px;
+  background: url('../img/chakangengduo_btn.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+}
+.resi-more .more-img.active {
+  background-image: url('../img/chakangengduo_pre.png');
+}
+.resi-backbtn {
+  width: 128px;
+  height: 44px;
+  background: url('../../../img//fanhuishouye_btn.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+.resi-backbtn:hover {
+  background-image: url('../../../img//fanhuishouye_pre.png');
+}
+.resi-tag {
+  width: 594px;
+  height: 577px;
+  display: none;
+  background: url('../img/biaoqianxiangqing_bg.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  top: 110px;
+  right: 60px;
+}
+.resi-tag .tag-main {
+  position: relative;
+}
+.resi-tag .title {
+  font-size: 30px;
+  color: #ffffff;
+  font-weight: bold;
+  position: absolute;
+  top: -40px;
+  left: 162px;
+}
+.resi-tag .small-title {
+  font-size: 16px;
+  color: #5ac4eb;
+  position: absolute;
+  top: -28px;
+  left: 13px;
+}
+.resi-tag .tag-close {
+  width: 40px;
+  height: 46px;
+  background: url('../../../img//guanbi_btn.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  top: -10px;
+  right: -20px;
+}
+.resi-tag .tag-close:hover {
+  background-image: url('../../../img//guanbi_pre.png');
+}
+.resi-tag .tag-list {
+  padding: 38px 20px 0px 34px;
+}
+.resi-tag .tag-list li {
+  margin-bottom: 28px;
+}
+.resi-tag .tag-list li p:nth-child(1) {
+  font-size: 24px;
+  color: #06e97f;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.resi-tag .tag-list li p:nth-child(2) {
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 40px;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.resi-tag .tag-list li .recom {
+  display: inline-block;
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 40px;
+  margin-right: 20px;
+}
+.resi-tag .tag-list li .recom:last-child {
+  margin-right: 0px;
+}
+.resi-tag .tag-list li .recom:hover {
+  text-decoration: underline;
+}
+.resi-tag .tag-btngroup {
+  position: absolute;
+  top: 516px;
+  left: 124px;
+}
+.resi-tag .tag-btngroup .sick,
+.resi-tag .tag-btngroup .protect {
+  display: inline-block;
+  width: 160px;
+  height: 48px;
+}
+.resi-tag .tag-btngroup .protect {
+  background: url('../img/fangzhizishi_btn.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.resi-tag .tag-btngroup .protect:hover {
+  background-image: url('../img/fangzhizishi_pre.png');
+}
+.resi-tag .tag-btngroup .sick {
+  background: url('../img/huanbingxiangqing_btn.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-right: 40px;
+}
+.resi-tag .tag-btngroup .sick:hover {
+  background-image: url('../img/huanbingxiangqing_pre.png');
+}
+.resi-people {
+  width: 580px;
+  height: 750px;
+  margin: 0px auto;
+  padding-top: 20px;
+  position: relative;
+}
+.resi-people .title {
+  width: 288px;
+  height: 82px;
+  margin: 0 auto;
+  background: url('../img/pinggujieguo_img.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.resi-people .people-type {
+  margin-top: -20px;
+}
+.resi-people .people-type li {
+  width: 332px;
+  height: 620px;
+  margin: 0 auto;
+}
+.resi-people .people-type li.diabetes {
+  background: url('../img/tangniaobing01_img.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.resi-people .people-type li.highblood {
+  background: url('../img/gaoxueya01_img.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.resi-people .people-type li.older {
+  background: url('../img/laonianren01_img.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.resi-people .people-type li.man {
+  background: url('../img/zizhunan01_img.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.resi-people .people-type li.woman {
+  background: url('../img/zizhunv01_img.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.resi-people .result-tag li {
+  font-size: 28px;
+  color: #abdbe9;
+  cursor: default;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  opacity: 0.9;
+}
+.resi-people .result-tag li:nth-child(1) {
+  position: absolute;
+  top: 272px;
+  left: 32px;
+}
+.resi-people .result-tag li:nth-child(3) {
+  position: absolute;
+  top: 488px;
+  left: 32px;
+}
+.resi-people .result-tag li:nth-child(5) {
+  position: absolute;
+  top: 344px;
+  left: -5px;
+  font-size: 32px;
+  color: #ff69ff;
+}
+.resi-people .result-tag li:nth-child(7) {
+  position: absolute;
+  top: 416px;
+  left: 32px;
+}
+.resi-people .result-tag li:nth-child(9) {
+  position: absolute;
+  top: 200px;
+  left: 82px;
+}
+.resi-people .result-tag li:nth-child(11) {
+  position: absolute;
+  top: 560px;
+  left: 66px;
+}
+.resi-people .result-tag li:nth-child(2) {
+  position: absolute;
+  top: 293px;
+  right: 51px;
+}
+.resi-people .result-tag li:nth-child(4) {
+  position: absolute;
+  top: 509px;
+  right: 54px;
+}
+.resi-people .result-tag li:nth-child(6) {
+  position: absolute;
+  top: 437px;
+  right: 0px;
+  font-size: 32px;
+  color: #04f17f;
+}
+.resi-people .result-tag li:nth-child(8) {
+  position: absolute;
+  top: 365px;
+  right: 8px;
+  font-size: 32px;
+  color: #ffff00;
+}
+.resi-people .result-tag li:nth-child(10) {
+  position: absolute;
+  top: 581px;
+  right: 102px;
+  font-size: 32px;
+  color: #ff7065;
+}
+.resi-people .result-tag li:nth-child(12) {
+  position: absolute;
+  top: 221px;
+  right: 53px;
+}
+.resi-people .people-msg {
+  text-align: center;
+  margin-top: 22px;
+}
+.resi-people .people-msg li {
+  display: inline-block;
+  font-size: 28px;
+  color: #5ac4eb;
+  margin-right: 30px;
+}
+.resi-people .people-msg li:last-child {
+  margin-right: 0px;
+}
+.resi-people .people-msg li .mw85 {
+  min-width: 85px;
+  display: inline-block;
+}
+.resi-people .people-msg li .mw40 {
+  display: inline-block;
+  min-width: 40px;
+}

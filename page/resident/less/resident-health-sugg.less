@@ -1,0 +1,181 @@
+@import 'common.less';
+
+.common-bg{
+    width: 1920px;
+    height: 1080px;
+    margin: 0 auto;
+    .noselect;
+    .bgimage('../../../img/xitong_bg.png');
+    .header{
+        padding: 20px 40px 0px 40px;
+        .backbtn{
+            .block;
+            width: 128px;
+            height: 44px;
+        }
+        .btn-before{
+            .fl;
+            .bgimage('../../../img/fanhui_btn.png');
+            &:hover{
+                background-image: url('../../../img/fanhui_pre.png')
+            }
+        }
+        .btn-index{
+            .fr;
+            .bgimage('../../../img/fanhuishouye_btn.png');
+            &:hover{
+                background-image: url('../../../img/fanhuishouye_pre.png')
+            }
+        }
+    }
+}
+.sugg-list{
+    margin: 22px 0px 30px 100px;
+    li{
+        .fl;
+       width: 528px;
+       height: 300px;
+       margin-right: 68px;
+       &:nth-child(1){
+           .bgimage('../img/yishijianyi_bg.png');
+       }
+       &:nth-child(2){
+           .bgimage('../img/yudongjianyi_bg.png');
+       }
+       &:nth-child(3){
+           .bgimage('../img/yongyaojianyi_bg.png');
+       }
+       &:last-child{
+           margin-right: 0px;
+       }
+       .text{
+           padding: 0px 30px;
+           p:nth-child(1){
+               .font(24px;#fff);
+               font-weight: bold;
+               padding-left: 80px;
+               line-height: 80px;
+               margin-bottom: 20px;
+           }
+           p:nth-child(2){
+               .font(20px;#fff);
+               line-height: 1.8;
+               text-indent: 2em;
+               .moredot(4);
+           }
+       }
+
+    }
+}
+.sugg-small-tag{
+    .ib;
+    width: 100%;
+    text-align: center;
+    .tag{
+        .ib;
+        width: 210px;
+        height: 48px;
+        .bgimage('../img/xiaobiaoqian_btn.png');
+        padding: 0 20px;
+        margin-bottom: 30px;
+        margin-right: 40px;
+        &:last-child{
+            margin-right: 0px;
+        }
+        li{
+            .dot;
+            line-height: 48px;
+            text-align: center;
+            .font(24px;#5ac4eb);
+        }
+        &:hover{
+            .bgimage('../img/xiaobiaoqian_pre.png');
+            li{
+                color:#fff;
+            }
+        }
+
+    }
+}
+.sugg-article{
+    width: 1840px;
+    height: 538px;
+    position: relative;
+    .bgimage('../img/jiaoyuwenzhang_bg.png');
+    margin-left: 40px;
+    .arti-list{
+        ul{
+            li{
+                .fl;
+                width: 1840px;
+                height: 538px;
+                .bgimage('../img/jiaoyuwenzhang_img.png');
+                .title{
+                    margin-top: 29px;
+                    margin-bottom: 50px;
+                    padding-left:98px;
+                    .font(24px;#fff);
+                    font-weight: bold;
+                }
+                .content{
+                    height: 365px;
+                    overflow: auto;
+                    .font(20px;#fff);
+                    line-height: 1.8;
+                    padding: 0 98px;
+                    p{
+                        text-indent: 2em;
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+        }
+    }
+    .arti-left{
+        .posi-alt(30px;239px);
+    }
+    .arti-right{
+        .posi-art(30px;239px);
+    }
+}
+.beforebtn{
+    .block;
+    width:24px;
+    height: 44px;
+    .bgimage('../../../img/zuoqiehuan_btn.png');
+    &:hover{
+        background-image: url('../../../img/zuoqiehuan_pre.png')
+    }
+}
+.afterbtn{
+    .block;
+    width:24px;
+    height: 44px;
+    .bgimage('../../../img/youqiehuan_btn.png');
+    &:hover{
+        background-image: url('../../../img/youqiehuan_pre.png')
+    }
+}
+
+.prot-article{
+    height: 934px;
+    margin-top: 36px;
+    .bgimage('../img/fangzhizhishi_bg.png');
+    .prot-list{
+        ul{
+            li{
+                height: 934px;
+                .bgimage('../img/fangzhizhishi_img.png');
+                .prot-content{
+                    height: 700px;
+                }
+            }
+        }
+    }
+    .arti-left{
+        .posi-alt(30px;438px);
+    }
+    .arti-right{
+        .posi-art(30px;438px);
+    }
+}

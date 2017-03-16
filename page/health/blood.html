@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../../css/cross.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Document</title>
+</head>
+<body style="background: #000;">
+<div class="container ovh">
+	<div class="main-nav ovh">
+		<a class="pre-page fl" onClick="javascript:history.back(-1);"></a>
+		<a href="../home/home.html" class="back-home fr"></a>
+	</div>
+	<ul class="sub-nav ovh" id="typeSrc">
+		<li class="sub-nav-a fl active">血糖</li>
+		<li class="sub-nav-b fl">血压</li>
+		<div class="sub-nav-line "></div>
+	</ul>
+	<ul class="sub-nav-list ovh mt40" id="bloodTypeSrc">
+		<li class="blood-glocose active">空腹血糖</li>
+		<li class="blood-glocose">早餐后血糖</li>
+		<li class="blood-glocose">午餐前血糖</li>
+		<li class="blood-glocose">午餐后血糖</li>
+		<li class="blood-glocose">晚餐前血糖</li>
+		<li class="blood-glocose">晚餐后血糖</li>
+		<li class="blood-glocose">睡前血糖</li>
+		<li class="blood-press" style="display: none;">舒张压</li>
+		<li class="blood-press" style="display: none;">收缩压</li>
+		<li class="blood-press" style="display: none;">心率</li>
+	</ul>
+	<ul class="sub-nav-list ovh mt40" id="timeTypeSrc">
+		<li class="sub-nav-time active">近一个月</li>
+		<li class="sub-nav-time">近半年</li>
+		<li class="sub-nav-time">近一年</li>
+	</ul>
+	<div id="statistics" class="statistics-box ovh">
+		<div class="statistics-item fl">
+			<div class="statistics-img fl" style="background: #ef69fe;"></div>
+			<div class="statistics-txt fl" style="color: #ef69fe;">
+				<span>偏高</span>
+				<span class="statistics-num" id="statisticsHigh">20</span>
+				次
+			</div>
+		</div>
+		<div class="statistics-item fl">
+			<div class="statistics-img fl" style="background: #06e682;"></div>
+			<div class="statistics-txt fl" style="color: #06e682;">
+				<span>正常</span>
+				<span class="statistics-num" id="statisticsNormal">20</span>
+				次
+			</div>
+		</div>
+		<div class="statistics-item fl">
+			<div class="statistics-img fl" style="background: #00ffff;"></div>
+			<div class="statistics-txt fl" style="color: #00ffff;">
+				<span>偏低</span>
+				<span class="statistics-num" id="statisticsLow">20</span>
+				次
+			</div>
+		</div>
+	</div>
+	<div class="chart-canvas">
+		<div id="glucoseChart" style="width: 100%;height: 100%;"></div>
+	</div>
+</div>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/echarts.js"></script>
+
+<script type="text/javascript" src="../../js/underscore.js"></script>
+<script type="text/javascript" src="../../js/es6-promise.js"></script>
+<script type="text/javascript" src="../../js/dialog-plus.min.js"></script>
+<script type="text/javascript" src="../../js/common-util.js"></script>
+<script type="text/javascript" src="../../js/common-http.js"></script>
+<script type="text/javascript" src="../../js/common-service.js"></script>
+<script type="text/javascript" src="../../js/ui-im-dialog.js"></script>
+<script type="text/javascript" src="../../js/common-socket.js"></script>
+
+<script src="js/blood.js"></script>
+</body>
+</html>

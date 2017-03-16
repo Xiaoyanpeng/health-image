@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>居民健康画像</title>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../css/cross.css" type="text/css"/>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/ui-dialog.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/resident-index.css">
+</head>
+<body>
+    <div class="resi-bgimage" id="resident_app">
+
+        <a href="../home/home.html" class="c-block resi-backbtn"></a>
+
+        <div id="resi_sugg" class="resi-sugg">
+            <div class="sugg-text">
+                <div class="title">
+                    <div>健康建议</div>
+                    <div>Health advice</div>
+                </div>
+                <ul class="sugg-type">
+                    <li v-for="(item,index) in suggestData">
+                        <span>{{item.typeName}}：</span>
+                        <span>{{item.content}}</span>
+                    </li>
+                </ul>
+                <a href="resident-health-sugg.html" class="c-block sugg-btn"></a>
+            </div>
+        </div>
+
+        <div class="resi-people">
+            <div class="title"></div>
+            <ul id="people_type" class="people-type animated zoomInUp" style="animation-duration: 2s;">
+                <li v-show="peopleType == 0" class="diabetes animated fadeIn" style="animation-duration: 2s;"></li>
+                <li v-show="peopleType == 1" class="highblood animated fadeIn" style="animation-duration: 2s;"></li>
+                <li v-show="peopleType == 2" class="older animated fadeIn" style="animation-duration: 2s;"></li>
+            </ul>
+            <ul id="result_tag" class="result-tag">
+                <li class="animated flipInY" style="animation-duration: 2s;" v-for="(item,index) in resultData" :data-id="item.id">{{item.value}}</li>
+            </ul>
+            <ul class="people-msg">
+                <li>姓名：<span class="mw85 animated zoomIn" style="animation-duration: 2s;">{{peopleMsg.name}}</span></li>
+                <li>性别：
+                    <span v-if="peopleMsg.sex=='1'" class="mw40 animated zoomIn" style="animation-duration: 2s;">男</span>
+                    <span v-if="peopleMsg.sex=='2'" class="mw40 animated zoomIn" style="animation-duration: 2s;">女</span>
+                </li>
+                <li>年龄：<span class="mw40 animated zoomIn" style="animation-duration: 2s;">{{peopleMsg.age}}</span></li>
+            </ul>
+        </div>
+
+        <div id="tag_main" class="resi-tag">
+            <div class="tag-main">
+                <div class="title">标签内容</div>
+                <div class="small-title">Label content</div>
+                <div id="tag_close" class="tag-close"></div>
+                <ul class="tag-list">
+                    <li v-for="(item,index) in tagData">
+                        <p>{{item.name}}</p>
+                        <p v-if="item.name == '推荐服务'">
+                            <a v-for="item in recommendService" :href="item.value" target="_blank" class="recom">{{item.key}}</a>
+                        </p>
+                        <p v-else>{{item.text}}</p>
+                    </li>
+                </ul>
+                <div class="tag-btngroup">
+                    <a href="resident-see-doctor.html" class="sick"></a>
+                    <a href="resident-protect-msg.html" class="protect"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="resi-change">
+            <div id="change_example" class="bgimg"></div>
+            <ul id="exam_list" class="exam-list clearfix">
+                <li class="animated fadeIn" :style="{animationDuration: 0.5*(1+index)+'s'}"
+                	v-for="(item,index) in examList" :class="item.clazz" :data-code="item.code" :data-id="index">
+                </li>
+                <li class="animated fadeIn man" style="animationDuration:1.5s" onclick="location.href='../health/blood2.html'"></li>
+            </ul>
+        </div>
+
+        <div class="resi-more">
+            <ul id="more_list" class="more-list clearfix">
+                <li id="user_info" class="personal animated fadeIn" style="animation-duration: 1.5s;"></li>
+                <li class="record animated fadeIn" style="animation-duration: 1.0s;" onclick="location.href='../health/blood.html'"></li>
+                <li class="file animated fadeIn" style="animation-duration: 0.5s;" onclick="location.href='resident-timeline.html'"></li>
+            </ul>
+            <div id="change_more" class="more-img"></div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../js/vue.js"></script>
+    <script type="text/javascript" src="../../js/underscore.js"></script>
+    <script type="text/javascript" src="../../js/es6-promise.js"></script>
+    <script type="text/javascript" src="../../js/dialog-plus.min.js"></script>
+    <script type="text/javascript" src="../../js/common-util.js"></script>
+    <script type="text/javascript" src="../../js/common-http.js"></script>
+    <script type="text/javascript" src="../../js/common-service.js"></script>
+    <script type="text/javascript" src="../../js/common-socket.js"></script>
+    <script type="text/javascript" src="../../js/sly.js"></script>
+    <script src="js/resident-index.js"></script>
+</body>
+</html>
